@@ -8,9 +8,9 @@ async function getBearerToken() {
     return cachedToken;
   }
 
-  const realmName = process.env.NEXT_PUBLIC_MERCATA_RELM || 'mercata';
-  const clientId = process.env.NEXT_PUBLIC_MERCATA_CLIENT_ID || 'localhost';
-  const clientSecret = process.env.NEXT_PUBLIC_MERCATA_CLIENT_SECRET;
+  const realmName = process.env.MERCATA_RELM || 'mercata';
+  const clientId = process.env.MERCATA_CLIENT_ID || 'localhost';
+  const clientSecret = process.env.MERCATA_CLIENT_SECRET;
 
   if (!realmName || !clientId || !clientSecret) {
     throw new Error('Missing required environment variables for Mercata authentication');

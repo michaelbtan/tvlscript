@@ -10,9 +10,10 @@ const appendToAirtable = require("./appendToAirtable");
     const formattedSum = formatTVL(sum);
 
     await appendToAirtable({
-      Timestamp: new Date().toISOString(),
+      Timestamp: new Date().toISOString().split('T')[0],
       "Total Value Locked": formattedSum,
     });
+  
   } catch (err) {
     console.error("Job failed:", err);
   }
