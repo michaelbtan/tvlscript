@@ -14,7 +14,7 @@ const appendToAirtable = require('./appendToAirtable');
   (async () => {
     try {
       const { mercataEscrowData } = await fetchAllMercataData();
-      const sum = mercataEscrowData?.[0]?.collateralValue?.sum || 0;
+      const sum = mercataEscrowData?.[0]?.sum || 0;
         const formattedSum = formatTVL(sum);
   
       await appendToAirtable({
@@ -25,3 +25,4 @@ const appendToAirtable = require('./appendToAirtable');
       console.error('Job failed:', err);
     }
   })();
+
