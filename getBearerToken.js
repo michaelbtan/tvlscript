@@ -48,7 +48,6 @@ async function getBearerToken() {
       throw new Error(`Failed to obtain bearer token: ${JSON.stringify(responseData)}`);
     }
   } catch (error) {
-    console.error(`Error in getBearerToken: ${error.message || error}`);
     throw error;
   }
 }

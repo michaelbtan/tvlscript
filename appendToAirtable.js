@@ -15,11 +15,9 @@ async function appendToAirtable(data) {
       },
     ]);
 
-    console.log("Appended to Airtable:", createdRecords);
     return createdRecords;
 
   } catch (error) {
-    console.error("Error appending to Airtable:", error);
     throw error;
   }
 }

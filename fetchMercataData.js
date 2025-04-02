@@ -56,7 +56,6 @@ async function fetchAllMercataData() {
 
     return { mercataEscrowData };
   } catch (error) {
-    console.error("Error fetching all Mercata data:", error);
     throw error;
   }
 }
